@@ -2,8 +2,6 @@
     This class displays the list of available games and runs the selected option.
 */
 
-using Microsoft.Win32.SafeHandles;
-
 class Program
 {
     static void Main(string[] args)
@@ -19,6 +17,7 @@ class Program
             Console.WriteLine("Choose a game to play:");
             Console.WriteLine("1. High Card");
             Console.WriteLine("2. Blackjack");
+            Console.WriteLine("3. WAR");
             Console.WriteLine("0. EXIT");
             Console.WriteLine("Enter Selection: ");
 
@@ -32,11 +31,14 @@ class Program
                 case "2":
                     game = new BlackJack();
                     break;
+                case "3":
+                    game = new War();
+                    break;
                 case "0":
                     playAgain = false;
                     break;
                 default:
-                    Console.WriteLine("Inalid choice. Press any key to try again...");
+                    Console.WriteLine("Invalid choice. Press any key to try again...");
                     Console.ReadKey();
                     continue;
             }
