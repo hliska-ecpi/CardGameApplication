@@ -37,15 +37,17 @@ public class HighCard : ICardGame
 
     //Compare the card values and display the winner
     //NOTE: Called after DealCards and Play.
-    public void ShowResult()
+    public void ShowResult(IScoreboard scoreboard)
     {
         if (playerCard.Value > computerCard.Value)
         {
             Console.WriteLine("You Win!");
+            scoreboard.RecordResult("HighCard", true);
         }
         else if (playerCard.Value < computerCard.Value)
         {
             Console.WriteLine("Computer wins!");
+            scoreboard.RecordResult("HighCard", false);
         }
         else
         {

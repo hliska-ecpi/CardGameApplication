@@ -12,5 +12,5 @@ public interface ICardGame
     void Start(); //Initialize and introduce the game
     void DealCards(); //Handle card distribution
     void Play(); //Run game-specific logic
-    void ShowResult(); //Display winning information
+    void ShowResult(IScoreboard scoreboard); //Display winning information. Abstraction for passing a scoreboard
 }

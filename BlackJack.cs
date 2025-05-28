@@ -98,7 +98,7 @@ public class BlackJack : ICardGame
     }
 
     //Display the final result of the game by comparing the player and dealer hands
-    public void ShowResult()
+    public void ShowResult(IScoreboard scoreboard)
     {
         int playerValue = HandValue(playerHand);
         int dealerValue = HandValue(dealerHand);
@@ -109,14 +109,17 @@ public class BlackJack : ICardGame
         if (playerValue > 21)
         {
             Console.WriteLine("BUST! Dealer wins.");
+            scoreboard.RecordResult("BlackJack", false);
         }
         else if (dealerValue > 21 || playerValue > dealerValue)
         {
             Console.WriteLine("You Win!");
+            scoreboard.RecordResult("BlackJack", true);
         }
         else if (playerValue < dealerValue)
         {
             Console.WriteLine("Dealer Wins.");
+            scoreboard.RecordResult("BlackJack", false);
         }
         else
         {

@@ -9,6 +9,7 @@ class Program
         ICardGame game = null;
         string choice, again;
         bool playAgain = true;
+        IScoreboard scoreboard = new Scoreboard();
 
         while (playAgain)
         {
@@ -47,7 +48,7 @@ class Program
             game.Start();
             game.DealCards();
             game.Play();
-            game.ShowResult();
+            game.ShowResult(scoreboard);
 
             Console.Write("\n\nWould you like to play another game? (Y/N): ");
             again = Console.ReadLine();
