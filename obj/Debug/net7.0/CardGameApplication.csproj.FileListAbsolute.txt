@@ -1,0 +1,15 @@
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\bin\Debug\net7.0\CardGameApplication.exe
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\bin\Debug\net7.0\CardGameApplication.deps.json
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\bin\Debug\net7.0\CardGameApplication.runtimeconfig.json
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\bin\Debug\net7.0\CardGameApplication.dll
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\bin\Debug\net7.0\CardGameApplication.pdb
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.csproj.AssemblyReference.cache
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.AssemblyInfoInputs.cache
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.AssemblyInfo.cs
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.csproj.CoreCompileInputs.cache
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.dll
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\refint\CardGameApplication.dll
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.pdb
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\CardGameApplication.genruntimeconfig.cache
+C:\Users\Hliska\Desktop\CardProject\CardGameApplication\obj\Debug\net7.0\ref\CardGameApplication.dll

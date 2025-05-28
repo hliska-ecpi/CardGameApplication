@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Deck
 {
+    private static readonly Random rng = new Random();
     private List<Card> cards;
     private static readonly string[] Suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
     private static readonly string[] Ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
@@ -43,7 +44,6 @@ public class Deck
     */
     public void Shuffle()
     {
-        var rng = new Random();
         int n = cards.Count;
         while (n > 1)
         {
@@ -63,7 +63,15 @@ public class Deck
         {
             return null;
         }
-        return cards[0];
+
+        //Save the top card of the deck
+        Card card = cards[0];
+
+        //Remove that card from the deck
+        cards.RemoveAt(0);
+
+        //Return the top card pulled from the deck
+        return card;
     }
 
     // Draw multiple cards at once

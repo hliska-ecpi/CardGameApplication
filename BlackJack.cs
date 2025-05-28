@@ -108,22 +108,27 @@ public class BlackJack : ICardGame
 
         if (playerValue > 21)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("BUST! Dealer wins.");
             scoreboard.RecordResult("BlackJack", false);
         }
         else if (dealerValue > 21 || playerValue > dealerValue)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You Win!");
             scoreboard.RecordResult("BlackJack", true);
         }
         else if (playerValue < dealerValue)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Dealer Wins.");
             scoreboard.RecordResult("BlackJack", false);
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("The Game Is A Tie!");
         }
+        Console.ResetColor();
     }
 }

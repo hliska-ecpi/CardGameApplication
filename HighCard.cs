@@ -41,17 +41,21 @@ public class HighCard : ICardGame
     {
         if (playerCard.Value > computerCard.Value)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You Win!");
             scoreboard.RecordResult("HighCard", true);
         }
         else if (playerCard.Value < computerCard.Value)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Computer wins!");
             scoreboard.RecordResult("HighCard", false);
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("It is a tie!");
         }
+        Console.ResetColor();
     }
 }

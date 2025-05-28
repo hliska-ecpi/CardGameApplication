@@ -48,4 +48,46 @@ public class Scoreboard : IScoreboard
 
         Console.WriteLine("========================\n\n");
     }
+
+    //Save stat data to a file
+    public void SaveToFile(string filename)
+    {
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            foreach (var kvp in stats)
+            {
+                string line = $"{kvp.Key},{kvp.Value.wins},{kvp.Value.losses},{kvp.Value.rounds}";
+                writer.WriteLine(line);
+            }
+        }
+    }
+
+    //Load stat data from a file
+    public bool LoadFromFile(string filename)
+    {
+        if (!File.Exists(filename))
+        {
+            return false;
+        }
+        else
+        {
+            stats.Clear();
+            foreach (String line in File.ReadAllLines(filename))
+            {
+                string[] parts = line.Split(',');
+                if (parts.Length == 4)
+                {
+                    string game = parts[0];
+                    int wins = int.Parse(parts[1]);
+                    int losses = int.Parse(parts[2]);
+                    int rounds = int.Parse(parts[3]);
+
+                    stats[game] = (wins, losses, rounds);
+                }
+            }
+
+            return true;
+        }
+
+    }
 }

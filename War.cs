@@ -117,17 +117,22 @@ public class War : ICardGame
         Console.WriteLine("\n=== WAR Game Over ===");
         if (playerDeck.Count > computerDeck.Count)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You win the game!");
             scoreboard.RecordResult("War", true);
         }
         else if (playerDeck.Count < computerDeck.Count)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Computer wins the game!");
             scoreboard.RecordResult("War", false);
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("The game has tied!");
         }
+
+        Console.ResetColor();
     }
 }
